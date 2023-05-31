@@ -8,3 +8,4 @@ C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNi
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.csproj.CoreCompileInputs.cache
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.exe
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.Form1.resources

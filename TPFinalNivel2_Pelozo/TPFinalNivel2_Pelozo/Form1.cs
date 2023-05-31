@@ -16,5 +16,7 @@ namespace TPFinalNivel2_Pelozo
         {
             InitializeComponent();
         }
+
+        
     }
 }
