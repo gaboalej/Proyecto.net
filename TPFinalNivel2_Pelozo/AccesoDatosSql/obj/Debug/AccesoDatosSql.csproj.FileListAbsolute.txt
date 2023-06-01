@@ -1,0 +1,6 @@
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\bin\Debug\AccesoDatosSql.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\bin\Debug\AccesoDatosSql.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\obj\Debug\AccesoDatosSql.csproj.AssemblyReference.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\obj\Debug\AccesoDatosSql.csproj.CoreCompileInputs.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\obj\Debug\AccesoDatosSql.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\AccesoDatosSql\obj\Debug\AccesoDatosSql.pdb
