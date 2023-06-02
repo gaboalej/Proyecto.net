@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
+            this.buttonAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 355);
+            this.dataGridView1.Size = new System.Drawing.Size(1133, 365);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -61,11 +62,22 @@
             this.labelBuscar.Text = "Buscar";
             this.labelBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonAgregar
+            // 
+            this.buttonAgregar.Location = new System.Drawing.Point(729, 431);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(100, 32);
+            this.buttonAgregar.TabIndex = 3;
+            this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 524);
+            this.ClientSize = new System.Drawing.Size(1213, 527);
+            this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.labelBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelBuscar;
+        private System.Windows.Forms.Button buttonAgregar;
     }
 }
 

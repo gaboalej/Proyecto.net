@@ -16,3 +16,4 @@ C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNi
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\bin\Debug\Dominio.pdb
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\bin\Debug\MetodosAPP.pdb
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.csproj.CopyComplete
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\TPFinalNivel2_Pelozo\obj\Debug\TPFinalNivel2_Pelozo.Form2.resources

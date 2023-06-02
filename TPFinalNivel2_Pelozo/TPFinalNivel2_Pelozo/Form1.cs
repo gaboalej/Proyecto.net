@@ -64,8 +64,19 @@ namespace TPFinalNivel2_Pelozo
 
         }
 
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            Form2 Agregar = new Form2();
+
+            Agregar.ShowDialog();
+
+            CargarDataGridView();
+
+            
 
 
 
+
+        }
     }
 }
