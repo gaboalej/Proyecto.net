@@ -11,6 +11,7 @@ using Dominio;
 using AccesoDatosSql;
 using FuncionesAPP;
 using System.IO;
+using System.Runtime.Remoting.Channels;
 
 namespace TPFinalNivel2_Pelozo
 {
@@ -37,7 +38,7 @@ namespace TPFinalNivel2_Pelozo
         {
 
 
-
+            
             Funciones MostrarDatos = new Funciones();
 
             try
@@ -46,8 +47,10 @@ namespace TPFinalNivel2_Pelozo
 
                 ListarDataGridView = MostrarDatos.Listar();
                 dataGridView1.DataSource = ListarDataGridView;
+                dataGridView1.Columns["ImagenUrl"].Visible = false;
                 cargarimagen(ListarDataGridView[0].ImagenUrl);
 
+                
 
 
 
@@ -103,36 +106,101 @@ namespace TPFinalNivel2_Pelozo
             pictureBoxArticulos.Load(imagen);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                pictureBoxArticulos.Load("https://blogs.unsw.edu.au/nowideas/files/2018/11/error-no-es-fracaso.jpg");
+                pictureBoxArticulos.Load("https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg?w=740&t=st=1685972963~exp=1685973563~hmac=d7423b4ab86d312d89adcd7a48787658ddd5581ab4c78a1b78550c5c4cded702");
             }
             
             
 
-
-
-
-
-
-
-
-
-
-
         }
-        
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
 
             
 
+            try
+
+            {
+
+                if (dataGridView1.Rows.Count > 0)
+                {
+
+                  MetodosGetSet seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                    Form2 Modificar = new Form2(seleccionado);
+                    Modificar.ShowDialog();
+                    CargarDataGridView();
+
+                }
+                else
+                {
 
 
 
-        
+                    MessageBox.Show("Porfavor Selecciona un articulo para modificarlo.");
+
+
+                     }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
 
 
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            Funciones Servicios = new Funciones();
+
+            MetodosGetSet seleccionado;
+
+            try
+            {
+             DialogResult respuesta = MessageBox.Show("Estas seguro de borrar el registro permanentemente ?", "eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+
+
+                    seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                    Servicios.Eliminar(seleccionado.Id);
+
+                    CargarDataGridView();
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+
+
+        }
+    }
     }
 

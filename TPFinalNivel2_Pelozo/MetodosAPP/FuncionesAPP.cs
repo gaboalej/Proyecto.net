@@ -161,7 +161,29 @@ namespace FuncionesAPP
 
         }
 
+        public void Eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
 
+                datos.SetearConsulta("delete from ARTICULOS where Id = @Id");
+
+                datos.setearparametros("@Id", id);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+
+        }
 
 
 

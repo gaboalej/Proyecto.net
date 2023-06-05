@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatosSql;
 using FuncionesAPP;
+using System.Drawing.Text;
 
 namespace TPFinalNivel2_Pelozo
 {
@@ -20,6 +21,16 @@ namespace TPFinalNivel2_Pelozo
         public Form2()
         {
             InitializeComponent();
+        }
+        public Form2(MetodosGetSet negocio)
+        {
+
+            InitializeComponent();
+
+            this.Negocio = negocio;
+            Text = "Modificar producto";
+
+
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
@@ -55,8 +66,12 @@ namespace TPFinalNivel2_Pelozo
                 }
                 else
                 {
+                   
+
+                    
 
                     Servicios.Agregar(Negocio);
+                    
 
                     MessageBox.Show("Se Agrego exitosamente!");
 
@@ -108,7 +123,7 @@ namespace TPFinalNivel2_Pelozo
 
 
 
-
+           
 
 
 
@@ -118,4 +133,12 @@ namespace TPFinalNivel2_Pelozo
 
         }
     }
+
+    
+    
+
+    
+
+
+
 }
