@@ -36,7 +36,7 @@ namespace FuncionesAPP
                     aux.IdMarca = (int)Datos.lector["IdMarca"];
                     aux.IdCategoria = (int)Datos.lector["IdCategoria"];
                     aux.ImagenUrl = (string)Datos.lector["ImagenUrl"];
-                   aux.Precio = (decimal)Datos.lector["Precio"];
+                    aux.Precio = (decimal)Datos.lector["Precio"];
 
                     Lista.Add(aux);
 
@@ -89,7 +89,7 @@ namespace FuncionesAPP
                 Datos.setearparametros("@Descripcion", Agregar.Descripcion);
                 Datos.setearparametros("@IdMarca", Agregar.IdMarca);
                 Datos.setearparametros("@IdCategoria", Agregar.IdCategoria);
-               Datos.setearparametros("@ImagenUrl", Agregar.ImagenUrl);
+                Datos.setearparametros("@ImagenUrl", Agregar.ImagenUrl);
                 Datos.setearparametros("@Precio", Agregar.Precio);
 
                 Datos.ejecutarAccion();

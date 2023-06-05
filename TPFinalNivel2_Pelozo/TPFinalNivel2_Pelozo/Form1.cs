@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Dominio;
 using AccesoDatosSql;
 using FuncionesAPP;
-
+using System.IO;
 
 namespace TPFinalNivel2_Pelozo
 {
@@ -46,7 +46,7 @@ namespace TPFinalNivel2_Pelozo
 
                 ListarDataGridView = MostrarDatos.Listar();
                 dataGridView1.DataSource = ListarDataGridView;
-
+                cargarimagen(ListarDataGridView[0].ImagenUrl);
 
 
 
@@ -78,5 +78,61 @@ namespace TPFinalNivel2_Pelozo
 
 
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            
+                MetodosGetSet seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                cargarimagen(seleccionado.ImagenUrl);
+
+                
+
+
+
+               
+
+         
+            }
+
+            private void cargarimagen (string imagen)
+        {
+
+
+            try
+            {
+            pictureBoxArticulos.Load(imagen);
+
+            }
+            catch (Exception ex)
+            {
+
+                pictureBoxArticulos.Load("https://blogs.unsw.edu.au/nowideas/files/2018/11/error-no-es-fracaso.jpg");
+            }
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+        }
+        
+
+            
+
+
+
+
+        
+
+
+
+        }
     }
-}
+

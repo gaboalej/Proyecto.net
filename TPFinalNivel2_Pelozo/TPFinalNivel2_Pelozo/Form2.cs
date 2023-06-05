@@ -43,6 +43,7 @@ namespace TPFinalNivel2_Pelozo
                Negocio.Descripcion = textBoxDescripcion.Text;
                Negocio.IdMarca = int.Parse(textBoxIdMarca.Text);
                Negocio.IdCategoria = int.Parse(textBoxIdCategoria.Text);
+               Negocio.ImagenUrl = textBoxImagenUrl.Text;
                Negocio.Precio = decimal.Parse(textBoxPrecio.Text);
                
                 if (Negocio.Id != 0)

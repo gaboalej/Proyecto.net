@@ -32,18 +32,23 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.pictureBoxArticulos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(37, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1133, 365);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(792, 365);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // textBox1
             // 
@@ -72,11 +77,21 @@
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
+            // pictureBoxArticulos
+            // 
+            this.pictureBoxArticulos.Location = new System.Drawing.Point(835, 45);
+            this.pictureBoxArticulos.Name = "pictureBoxArticulos";
+            this.pictureBoxArticulos.Size = new System.Drawing.Size(327, 365);
+            this.pictureBoxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxArticulos.TabIndex = 4;
+            this.pictureBoxArticulos.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 527);
+            this.Controls.Add(this.pictureBoxArticulos);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.labelBuscar);
             this.Controls.Add(this.textBox1);
@@ -86,6 +101,7 @@
             this.Text = ".NetApp";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,6 +113,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelBuscar;
         private System.Windows.Forms.Button buttonAgregar;
+        private System.Windows.Forms.PictureBox pictureBoxArticulos;
     }
 }
 
