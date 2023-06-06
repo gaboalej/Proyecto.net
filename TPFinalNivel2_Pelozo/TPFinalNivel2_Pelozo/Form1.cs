@@ -18,7 +18,7 @@ namespace TPFinalNivel2_Pelozo
     public partial class Form1 : Form
     {
 
-        private List<MetodosGetSet> ListarDataGridView;
+        private List<MetodosGetSet> ListaDataGridView;
 
 
 
@@ -45,10 +45,10 @@ namespace TPFinalNivel2_Pelozo
             {
 
 
-                ListarDataGridView = MostrarDatos.Listar();
-                dataGridView1.DataSource = ListarDataGridView;
+                ListaDataGridView = MostrarDatos.Listar();
+                dataGridView1.DataSource = ListaDataGridView;
                 dataGridView1.Columns["ImagenUrl"].Visible = false;
-                cargarimagen(ListarDataGridView[0].ImagenUrl);
+                cargarimagen(ListaDataGridView[0].ImagenUrl);
 
                 
 
@@ -201,6 +201,30 @@ namespace TPFinalNivel2_Pelozo
 
 
         }
+
+        private void textBoxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<MetodosGetSet> ListaFiltro;
+            if (textBoxFiltro.Text.Length > 0)
+            {
+
+                ListaFiltro = ListaDataGridView.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+            }
+            else
+            {
+
+                ListaFiltro = ListaDataGridView;
+
+
+            }
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = ListaFiltro;
+
+
+
+        }
+
     }
     }
 

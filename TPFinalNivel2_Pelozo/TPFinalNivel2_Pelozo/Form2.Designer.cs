@@ -49,6 +49,7 @@
             // 
             // labelCodigo
             // 
+            this.labelCodigo.BackColor = System.Drawing.Color.Honeydew;
             this.labelCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCodigo.Location = new System.Drawing.Point(41, 46);
             this.labelCodigo.Name = "labelCodigo";
@@ -59,13 +60,16 @@
             // 
             // textBoxCodigo
             // 
+            this.textBoxCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxCodigo.Location = new System.Drawing.Point(147, 47);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(253, 22);
             this.textBoxCodigo.TabIndex = 1;
+            this.textBoxCodigo.TextChanged += new System.EventHandler(this.textBoxCodigo_TextChanged);
             // 
             // labelNombre
             // 
+            this.labelNombre.BackColor = System.Drawing.Color.Honeydew;
             this.labelNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelNombre.Location = new System.Drawing.Point(41, 92);
             this.labelNombre.Name = "labelNombre";
@@ -76,13 +80,16 @@
             // 
             // textBoxNombre
             // 
+            this.textBoxNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxNombre.Location = new System.Drawing.Point(147, 93);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(253, 22);
             this.textBoxNombre.TabIndex = 3;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // labelDescripcion
             // 
+            this.labelDescripcion.BackColor = System.Drawing.Color.Honeydew;
             this.labelDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDescripcion.Location = new System.Drawing.Point(41, 138);
             this.labelDescripcion.Name = "labelDescripcion";
@@ -93,13 +100,16 @@
             // 
             // textBoxDescripcion
             // 
+            this.textBoxDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxDescripcion.Location = new System.Drawing.Point(147, 138);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(253, 22);
             this.textBoxDescripcion.TabIndex = 5;
+            this.textBoxDescripcion.TextChanged += new System.EventHandler(this.textBoxDescripcion_TextChanged);
             // 
             // labelIdMarca
             // 
+            this.labelIdMarca.BackColor = System.Drawing.Color.Honeydew;
             this.labelIdMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelIdMarca.Location = new System.Drawing.Point(41, 185);
             this.labelIdMarca.Name = "labelIdMarca";
@@ -110,13 +120,17 @@
             // 
             // textBoxIdMarca
             // 
+            this.textBoxIdMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxIdMarca.Location = new System.Drawing.Point(147, 186);
             this.textBoxIdMarca.Name = "textBoxIdMarca";
             this.textBoxIdMarca.Size = new System.Drawing.Size(253, 22);
             this.textBoxIdMarca.TabIndex = 7;
+            this.textBoxIdMarca.TextChanged += new System.EventHandler(this.textBoxIdMarca_TextChanged);
+            this.textBoxIdMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIdMarca_KeyPress);
             // 
             // labelIdCategoria
             // 
+            this.labelIdCategoria.BackColor = System.Drawing.Color.Honeydew;
             this.labelIdCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelIdCategoria.Location = new System.Drawing.Point(41, 231);
             this.labelIdCategoria.Name = "labelIdCategoria";
@@ -127,13 +141,17 @@
             // 
             // textBoxIdCategoria
             // 
+            this.textBoxIdCategoria.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxIdCategoria.Location = new System.Drawing.Point(147, 232);
             this.textBoxIdCategoria.Name = "textBoxIdCategoria";
             this.textBoxIdCategoria.Size = new System.Drawing.Size(253, 22);
             this.textBoxIdCategoria.TabIndex = 9;
+            this.textBoxIdCategoria.TextChanged += new System.EventHandler(this.textBoxIdCategoria_TextChanged);
+            this.textBoxIdCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIdCategoria_KeyPress);
             // 
             // labelImagenUrl
             // 
+            this.labelImagenUrl.BackColor = System.Drawing.Color.Honeydew;
             this.labelImagenUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelImagenUrl.Location = new System.Drawing.Point(41, 277);
             this.labelImagenUrl.Name = "labelImagenUrl";
@@ -144,6 +162,7 @@
             // 
             // labelPrecio
             // 
+            this.labelPrecio.BackColor = System.Drawing.Color.Honeydew;
             this.labelPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecio.Location = new System.Drawing.Point(41, 323);
             this.labelPrecio.Name = "labelPrecio";
@@ -154,41 +173,49 @@
             // 
             // textBoxImagenUrl
             // 
+            this.textBoxImagenUrl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxImagenUrl.Location = new System.Drawing.Point(147, 278);
             this.textBoxImagenUrl.Name = "textBoxImagenUrl";
             this.textBoxImagenUrl.Size = new System.Drawing.Size(253, 22);
             this.textBoxImagenUrl.TabIndex = 12;
+            this.textBoxImagenUrl.TextChanged += new System.EventHandler(this.textBoxImagenUrl_TextChanged);
             // 
             // textBoxPrecio
             // 
+            this.textBoxPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxPrecio.Location = new System.Drawing.Point(147, 324);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(253, 22);
             this.textBoxPrecio.TabIndex = 13;
+            this.textBoxPrecio.TextChanged += new System.EventHandler(this.textBoxPrecio_TextChanged);
+            this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
             // buttonAceptar
             // 
+            this.buttonAceptar.BackColor = System.Drawing.Color.GhostWhite;
             this.buttonAceptar.Location = new System.Drawing.Point(147, 397);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(100, 31);
             this.buttonAceptar.TabIndex = 14;
             this.buttonAceptar.Text = "Aceptar";
-            this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.BackColor = System.Drawing.Color.GhostWhite;
             this.buttonCancelar.Location = new System.Drawing.Point(404, 397);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 31);
             this.buttonCancelar.TabIndex = 15;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
@@ -206,6 +233,8 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.textBoxCodigo);
             this.Controls.Add(this.labelCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.pictureBoxArticulos = new System.Windows.Forms.PictureBox();
@@ -53,12 +53,14 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // textBox1
+            // textBoxFiltro
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 435);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxFiltro.Location = new System.Drawing.Point(186, 435);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(483, 22);
+            this.textBoxFiltro.TabIndex = 1;
+            this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
             // 
             // labelBuscar
             // 
@@ -122,7 +124,7 @@
             this.Controls.Add(this.pictureBoxArticulos);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.labelBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -140,7 +142,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.Label labelBuscar;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.PictureBox pictureBoxArticulos;
