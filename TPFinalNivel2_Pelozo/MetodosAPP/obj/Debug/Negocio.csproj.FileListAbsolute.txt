@@ -1,0 +1,11 @@
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\Negocio.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\Negocio.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\AccesoDatosSql.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\Dominio.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\AccesoDatosSql.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\bin\Debug\Dominio.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\obj\Debug\Negocio.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-\Proyecto.net\TPFinalNivel2_Pelozo\MetodosAPP\obj\Debug\Negocio.pdb

@@ -4,3 +4,9 @@ C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\Dominio\o
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.dll
 C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\bin\Debug\Dominio.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\bin\Debug\Dominio.pdb
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.dll
+C:\Users\pc_notebook\Desktop\Proyecto-app-.net-c#\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\Proyecto.net-f6bb5a2f42a033bdeffef9f43c6166caeaaac65a\TPFinalNivel2_Pelozo\Dominio\obj\Debug\Dominio.pdb

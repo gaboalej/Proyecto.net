@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatosSql", "AccesoDatosSql\AccesoDatosSql.csproj", "{171C4C8A-D32B-4EA7-9648-46BF3E7B7856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funciones", "MetodosAPP\Funciones.csproj", "{3620B0E5-82CD-48E4-9AB4-4B838B833579}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "MetodosAPP\Negocio.csproj", "{3620B0E5-82CD-48E4-9AB4-4B838B833579}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,8 +7,8 @@
     <ProjectGuid>{3620B0E5-82CD-48E4-9AB4-4B838B833579}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MetodosAPP</RootNamespace>
-    <AssemblyName>MetodosAPP</AssemblyName>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FuncionesAPP.cs" />
+    <Compile Include="NegocioArticulos.cs" />
+    <Compile Include="NegocioCategorias.cs" />
+    <Compile Include="NegocioMarcas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatosSql\AccesoDatosSql.csproj">

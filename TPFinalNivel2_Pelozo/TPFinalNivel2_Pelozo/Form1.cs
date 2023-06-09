@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using AccesoDatosSql;
-using FuncionesAPP;
+using Negocio;
 using System.IO;
 using System.Runtime.Remoting.Channels;
+
 
 namespace TPFinalNivel2_Pelozo
 {
     public partial class Form1 : Form
     {
 
-        private List<MetodosGetSet> ListaDataGridView;
+        private List<Articulos> ListaDataGridView;
 
 
 
@@ -39,7 +40,7 @@ namespace TPFinalNivel2_Pelozo
 
 
             
-            Funciones MostrarDatos = new Funciones();
+           NegocioArticulo  MostrarDatos = new NegocioArticulo();
 
             try
             {
@@ -85,7 +86,7 @@ namespace TPFinalNivel2_Pelozo
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             
-                MetodosGetSet seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
                 cargarimagen(seleccionado.ImagenUrl);
 
                 
@@ -128,7 +129,7 @@ namespace TPFinalNivel2_Pelozo
                 if (dataGridView1.Rows.Count > 0)
                 {
 
-                  MetodosGetSet seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                  Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
                     Form2 Modificar = new Form2(seleccionado);
                     Modificar.ShowDialog();
                     CargarDataGridView();
@@ -156,9 +157,9 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            Funciones Servicios = new Funciones();
+            NegocioArticulo Servicios = new NegocioArticulo();
 
-            MetodosGetSet seleccionado;
+            Articulos seleccionado;
 
             try
             {
@@ -168,7 +169,7 @@ namespace TPFinalNivel2_Pelozo
                 {
 
 
-                    seleccionado = (MetodosGetSet)dataGridView1.CurrentRow.DataBoundItem;
+                    seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
                     Servicios.Eliminar(seleccionado.Id);
 
                     CargarDataGridView();
@@ -204,7 +205,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)
         {
-            List<MetodosGetSet> ListaFiltro;
+            List<Articulos> ListaFiltro;
             if (textBoxFiltro.Text.Length > 0)
             {
 

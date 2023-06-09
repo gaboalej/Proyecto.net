@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class MetodosGetSet
+    public class Articulos
     {
         public int Id { get; set; }
 
@@ -26,6 +26,9 @@ namespace Dominio
 
         public decimal Precio { get; set; }
 
+        public Marcas Marca { get; set; }
+
+        public Categoria categoria { get; set; }
 
 
 

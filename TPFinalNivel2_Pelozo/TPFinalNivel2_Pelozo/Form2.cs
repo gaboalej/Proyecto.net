@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatosSql;
-using FuncionesAPP;
+using Negocio;
 using System.Drawing.Text;
 using System.Diagnostics.Eventing.Reader;
 
@@ -17,13 +17,14 @@ namespace TPFinalNivel2_Pelozo
 {
     public partial class Form2 : Form
     {
-        private MetodosGetSet Negocio = null;
+        private Articulos Negocio = null;
+       
         
         public Form2()
         {
             InitializeComponent();
         }
-        public Form2(MetodosGetSet negocio)
+        public Form2(Articulos negocio)
         {
 
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-        Funciones Servicios= new Funciones();
+        NegocioArticulo Servicios= new NegocioArticulo();
 
 
             try
@@ -45,7 +46,7 @@ namespace TPFinalNivel2_Pelozo
                 if (Negocio == null) {
                 
                 
-                    Negocio = new MetodosGetSet();
+                    Negocio = new Articulos();
                 
                 
                 }
@@ -59,10 +60,11 @@ namespace TPFinalNivel2_Pelozo
                 Negocio.Codigo= textBoxCodigo.Text;
                Negocio.Nombre= textBoxNombre.Text;
                Negocio.Descripcion = textBoxDescripcion.Text;
-               Negocio.IdMarca = int.Parse(textBoxIdMarca.Text);
-                Negocio.IdCategoria = int.Parse(textBoxIdCategoria.Text);
-               Negocio.ImagenUrl = textBoxImagenUrl.Text;
+                Negocio.IdMarca = ((Marcas)comboBoxIdMarca.SelectedItem).Id;
+                Negocio.IdCategoria = ((Categoria)comboBoxIdCategoria.SelectedItem).Id;
+                Negocio.ImagenUrl = textBoxImagenUrl.Text;
                Negocio.Precio = decimal.Parse(textBoxPrecio.Text);
+             
 
 
 
@@ -113,6 +115,43 @@ namespace TPFinalNivel2_Pelozo
 
         private void Form2_Load(object sender, EventArgs e)
         {
+          
+            NegocioMarcas marcas = new NegocioMarcas();
+            try
+            {
+
+                List<Marcas> marcasList = marcas.Listar();
+
+                comboBoxIdMarca.DisplayMember = "Id";
+                comboBoxIdMarca.ValueMember = "Id";
+                comboBoxIdMarca.DataSource = marcasList;
+                comboBoxMarcaDescripcion.DataSource = marcasList;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            NegocioCategorias Categorias = new NegocioCategorias();
+            try
+            {
+
+                List<Categoria> CategoriaList = Categorias.Listar();
+
+                comboBoxIdCategoria.DisplayMember = "Id";
+                comboBoxIdCategoria.ValueMember = "Id";
+                comboBoxIdCategoria.DataSource = CategoriaList;
+                comboBoxCategoriaDescripcion.DataSource = CategoriaList;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
             try
             {
 
@@ -122,8 +161,8 @@ namespace TPFinalNivel2_Pelozo
               textBoxCodigo.Text = Negocio.Codigo;
               textBoxNombre.Text = Negocio.Nombre;
               textBoxDescripcion.Text = Negocio.Descripcion;
-              textBoxIdMarca.Text =Negocio.IdMarca.ToString();
-              textBoxIdCategoria.Text = Negocio.IdCategoria.ToString();
+              
+              
               textBoxImagenUrl.Text = Negocio.ImagenUrl;
               textBoxPrecio.Text = Negocio.Precio.ToString();
 
@@ -179,25 +218,8 @@ namespace TPFinalNivel2_Pelozo
                 textBoxDescripcion.BackColor = SystemColors.Window;
             }
 
-            if (string.IsNullOrEmpty(textBoxIdMarca.Text))
-            {
-                textBoxIdMarca.BackColor = Color.Red;
-                camposValidos = false;
-            }
-            else
-            {
-                textBoxIdMarca.BackColor = SystemColors.Window;
-            }
 
-            if (string.IsNullOrEmpty(textBoxIdCategoria.Text))
-            {
-                textBoxIdCategoria.BackColor = Color.Red;
-                camposValidos = false;
-            }
-            else
-            {
-                textBoxIdCategoria.BackColor = SystemColors.Window;
-            }
+          
 
             if (string.IsNullOrEmpty(textBoxImagenUrl.Text))
             {
@@ -256,27 +278,9 @@ namespace TPFinalNivel2_Pelozo
             }
         }
 
-        private void textBoxIdMarca_TextChanged(object sender, EventArgs e)
-        {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
-            if (textBoxIdMarca.Text.Length > 0)
-            {
+     
 
-              textBoxIdMarca.BackColor = SystemColors.Window;
-
-            }
-        }
-
-        private void textBoxIdCategoria_TextChanged(object sender, EventArgs e)
-        {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
-            if (textBoxIdCategoria.Text.Length > 0)
-            {
-
-                textBoxIdCategoria.BackColor = SystemColors.Window;
-
-            }
-        }
+        
 
         private void textBoxImagenUrl_TextChanged(object sender, EventArgs e)
         {
@@ -332,6 +336,8 @@ namespace TPFinalNivel2_Pelozo
                 e.Handled = true;
             }
         }
+
+       
     }
 
     
