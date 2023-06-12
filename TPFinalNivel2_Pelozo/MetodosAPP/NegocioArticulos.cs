@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 using AccesoDatosSql;
+using System.Text.RegularExpressions;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Negocio
 
@@ -191,7 +193,153 @@ namespace Negocio
 
     }
 
+    public List<Articulos> Filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulos> ListaFiltroAvanzado = new List<Articulos>();
+            AccesoDatos datosFiltro = new AccesoDatos();
+            try
+            {
+                string consultaFiltro = "SELECT A.Id, Codigo, Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion as Categoria, ImagenUrl, Precio FROM ARTICULOS A, MARCAS M,CATEGORIAS C where A.IdMarca = M.Id and A.IdCategoria = C.Id and ";
+                if (campo == "Codigo")
+                {
+                    
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consultaFiltro += " Codigo like '" + filtro + "%'";
+                           
+                            break;
+                        case "Termina con":
+                            consultaFiltro += "Codigo like '%" + filtro +"'";
+                          
+
+                            break;
 
 
-}
+                        default:
+                            consultaFiltro += " Codigo like '%"+ filtro +"%'  ";
+                            break;
+                    }
+                }
+                else if (campo == "Nombre")
+                {
+
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consultaFiltro += " Nombre like '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consultaFiltro += "Nombre like '%" + filtro + "'";
+                            break;
+
+
+                        default:
+                            consultaFiltro += " Nombre like '%" + filtro + "%'  ";
+                            break;
+                    }
+                }
+                else if(campo == "Id")
+                {
+                    
+
+                  switch (criterio)
+                    {
+
+                        case "Mayor a":
+                           
+                           
+                            if (string.IsNullOrEmpty(filtro))
+                            {
+                                consultaFiltro += " " + filtro;
+                                consultaFiltro = "SELECT A.Id, Codigo, Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion as Categoria, ImagenUrl, Precio FROM ARTICULOS A, MARCAS M,CATEGORIAS C where A.IdMarca = M.Id and A.IdCategoria = C.Id ";
+                            }
+                            else
+                            {
+
+                                consultaFiltro += " A.Id  > " + filtro;
+                            }
+                            break;
+
+                            
+                        case "Menor a":
+                            if (string.IsNullOrEmpty(filtro))
+                            {
+                                consultaFiltro += " " + filtro;
+                                consultaFiltro = "SELECT A.Id, Codigo, Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion as Categoria, ImagenUrl, Precio FROM ARTICULOS A, MARCAS M,CATEGORIAS C where A.IdMarca = M.Id and A.IdCategoria = C.Id ";
+                            }
+                            else { 
+                            
+                            consultaFiltro += " A.Id  < " + filtro;
+                                }
+                            break;
+                        
+
+                        default:
+                            
+                            if (string.IsNullOrEmpty(filtro))
+                            {
+                                consultaFiltro += " " + filtro;
+                                consultaFiltro = "SELECT A.Id, Codigo, Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion as Categoria, ImagenUrl, Precio FROM ARTICULOS A, MARCAS M,CATEGORIAS C where A.IdMarca = M.Id and A.IdCategoria = C.Id ";
+                            }
+                            else
+                            {
+
+                                consultaFiltro += " A.Id  =" + filtro;
+                            }
+                            break;
+
+                           
+                    }
+
+                }
+
+                datosFiltro.SetearConsulta(consultaFiltro);
+                datosFiltro.EjecutarLectura();
+
+                while (datosFiltro.lector.Read())
+                {
+                    Articulos aux = new Articulos();
+
+                    aux.Id = (int)datosFiltro.lector["Id"];
+                    aux.Codigo = (string)datosFiltro.lector["Codigo"];
+                    aux.Nombre = (String)datosFiltro.lector["Nombre"];
+                    aux.Descripcion = (String)datosFiltro.lector["Descripcion"];
+                    aux.IdMarca = (int)datosFiltro.lector["IdMarca"];
+                    aux.Marca = new Marcas();
+                    aux.Marca.Descripcion = (string)datosFiltro.lector["Marca"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.Descripcion = (string)datosFiltro.lector["Categoria"];
+                    aux.IdCategoria = (int)datosFiltro.lector["IdCategoria"];
+                    aux.ImagenUrl = (string)datosFiltro.lector["ImagenUrl"];
+                    aux.Precio = (decimal)datosFiltro.lector["Precio"];
+                    ListaFiltroAvanzado.Add(aux);
+
+
+                }
+                
+
+                return ListaFiltroAvanzado;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+
+
+   
+
 }
