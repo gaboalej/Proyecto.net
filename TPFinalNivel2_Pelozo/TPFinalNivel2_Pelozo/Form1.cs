@@ -18,7 +18,7 @@ namespace TPFinalNivel2_Pelozo
 {
     public partial class Form1 : Form
     {
-
+        // declaro la lista de tipo articulo , para que esos items se carguen en el datagrid.
         private List<Articulos> ListaDataGridView;
 
 
@@ -32,6 +32,8 @@ namespace TPFinalNivel2_Pelozo
         {
 
             CargarDataGridView();
+
+            // cargo todos los items que va a tener el combobox campo.
             comboBoxCampo.Items.Add("Codigo");
             comboBoxCampo.Items.Add("Nombre");
             comboBoxCampo.Items.Add("Id");
@@ -39,6 +41,8 @@ namespace TPFinalNivel2_Pelozo
 
         }
 
+
+        //Metodo para cargar el datagrid.
         private void CargarDataGridView()
         {
 
@@ -52,9 +56,19 @@ namespace TPFinalNivel2_Pelozo
 
                 ListaDataGridView = MostrarDatos.Listar();
                 dataGridView1.DataSource = ListaDataGridView;
+                //oculto las columnas que quiero.
                 dataGridView1.Columns["ImagenUrl"].Visible = false;
-                cargarimagen(ListaDataGridView[0].ImagenUrl);
+                dataGridView1.Columns["IdMarca"].Visible = false;
+                dataGridView1.Columns["IdCategoria"].Visible = false;
+                dataGridView1.Columns["Descripcion"].Visible = false;
 
+
+                //se carga la imagen que esta en el primer lugar del index.
+                cargarimagen(ListaDataGridView[0].ImagenUrl);
+               
+                
+                
+                //Ordeno las columnas del datagridview.
                 dataGridView1.Columns["Id"].DisplayIndex = 0;
                 dataGridView1.Columns["Codigo"].DisplayIndex = 1;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
@@ -188,18 +202,7 @@ namespace TPFinalNivel2_Pelozo
 
 
 
-
-
                 }
-
-
-
-
-
-
-
-
-
 
             }
             catch (Exception ex)
@@ -338,7 +341,27 @@ namespace TPFinalNivel2_Pelozo
             }
         }
 
-       
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+
+
+
+
+            // Obtener el artículo seleccionado en el dataGridView1
+            Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
+
+            // Crear una nueva instancia del Form3 y pasar el artículo seleccionado como parámetro
+            Form3 Verdetalles = new Form3(seleccionado);
+            Verdetalles.ShowDialog();
+
+
+
+
+
+
+        }
+
+
     }
     }
 

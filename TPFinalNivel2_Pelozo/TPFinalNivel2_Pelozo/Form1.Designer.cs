@@ -43,6 +43,7 @@
             this.labelFiltroAvanzado = new System.Windows.Forms.Label();
             this.textBoxFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonDetalles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulos)).BeginInit();
             this.SuspendLayout();
@@ -169,6 +170,7 @@
             // 
             // textBoxFiltroAvanzado
             // 
+            this.textBoxFiltroAvanzado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(768, 497);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(220, 22);
@@ -185,6 +187,16 @@
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
+            // buttonDetalles
+            // 
+            this.buttonDetalles.Location = new System.Drawing.Point(611, 438);
+            this.buttonDetalles.Name = "buttonDetalles";
+            this.buttonDetalles.Size = new System.Drawing.Size(100, 32);
+            this.buttonDetalles.TabIndex = 14;
+            this.buttonDetalles.Text = "Ver Detalles";
+            this.buttonDetalles.UseVisualStyleBackColor = true;
+            this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,6 +205,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1478, 699);
+            this.Controls.Add(this.buttonDetalles);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBoxFiltroAvanzado);
             this.Controls.Add(this.labelFiltroAvanzado);
@@ -211,7 +224,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ".NetAppPrueba";
+            this.Text = ".NetAppComercio";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulos)).EndInit();
@@ -236,6 +249,7 @@
         private System.Windows.Forms.Label labelFiltroAvanzado;
         private System.Windows.Forms.TextBox textBoxFiltroAvanzado;
         private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Button buttonDetalles;
     }
 }
 

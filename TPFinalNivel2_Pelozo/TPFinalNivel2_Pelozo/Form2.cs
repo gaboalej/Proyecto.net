@@ -28,7 +28,7 @@ namespace TPFinalNivel2_Pelozo
         {
 
             InitializeComponent();
-
+            // se le agrega el nombre a la ventana del formulario modificar.
             this.Negocio = negocio;
             Text = "Modificar producto";
 

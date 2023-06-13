@@ -208,6 +208,7 @@
             // 
             // comboBoxMarcaDescripcion
             // 
+            this.comboBoxMarcaDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarcaDescripcion.FormattingEnabled = true;
             this.comboBoxMarcaDescripcion.Location = new System.Drawing.Point(147, 148);
             this.comboBoxMarcaDescripcion.Name = "comboBoxMarcaDescripcion";
@@ -216,6 +217,7 @@
             // 
             // comboBoxIdMarca
             // 
+            this.comboBoxIdMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdMarca.FormattingEnabled = true;
             this.comboBoxIdMarca.Location = new System.Drawing.Point(147, 194);
             this.comboBoxIdMarca.Name = "comboBoxIdMarca";
@@ -224,6 +226,7 @@
             // 
             // comboBoxIdCategoria
             // 
+            this.comboBoxIdCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdCategoria.FormattingEnabled = true;
             this.comboBoxIdCategoria.Location = new System.Drawing.Point(148, 287);
             this.comboBoxIdCategoria.Name = "comboBoxIdCategoria";
@@ -243,6 +246,7 @@
             // 
             // comboBoxCategoriaDescripcion
             // 
+            this.comboBoxCategoriaDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategoriaDescripcion.FormattingEnabled = true;
             this.comboBoxCategoriaDescripcion.Location = new System.Drawing.Point(148, 241);
             this.comboBoxCategoriaDescripcion.Name = "comboBoxCategoriaDescripcion";
@@ -253,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Indigo;
+            this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 467);
             this.Controls.Add(this.comboBoxCategoriaDescripcion);
             this.Controls.Add(this.labelCategoria);
@@ -279,7 +283,7 @@
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Agregar Producto";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
