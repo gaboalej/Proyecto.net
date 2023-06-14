@@ -10,7 +10,7 @@ namespace Negocio
 {
     public class NegocioCategorias
     {
-
+        // metodo  para listar las categorias.
         public List<Categoria> Listar()
         {
 

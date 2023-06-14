@@ -15,6 +15,7 @@ namespace TPFinalNivel2_Pelozo
     public partial class Form3 : Form
     {
         List<Articulos> ListaDataGridView;
+        // variable articulos que recibe el valor del constructor.
         private Articulos articuloSeleccionado;
         public Form3(Articulos seleccionado)
         {
@@ -22,6 +23,7 @@ namespace TPFinalNivel2_Pelozo
 
       
             InitializeComponent();
+            // recibe el valor del datagridview1 que se encuentra en el form1 para poder mostrar en el datagridview detalles , segun el articulo seleccionado del datagridview1(form1).
             articuloSeleccionado = seleccionado;
 
 

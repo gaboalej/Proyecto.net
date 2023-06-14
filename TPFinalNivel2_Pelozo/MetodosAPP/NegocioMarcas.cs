@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Negocio
-{
+{   
+    //metodo para listar las marcas.
     public class NegocioMarcas
     {
         public List<Marcas> Listar()

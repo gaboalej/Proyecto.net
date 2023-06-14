@@ -13,11 +13,11 @@ namespace Negocio
 {
     public class NegocioArticulo
 {
-
+     // en este metodo aplico una lista para poder obtener los objetos de la base de datos.  
     public List<Articulos> Listar()
     {
-
-        List<Articulos> Lista = new List<Articulos>();
+            
+            List<Articulos> Lista = new List<Articulos>();
         AccesoDatos Datos = new AccesoDatos();
 
 
@@ -69,21 +69,8 @@ namespace Negocio
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
+    // metodo para poder insertar articulos a la base de datos , tomando como parametro los metodos get set  de articulos.
     public void Agregar(Articulos Agregar)
     {
         AccesoDatos Datos = new AccesoDatos();
@@ -125,7 +112,7 @@ namespace Negocio
 
 
     }
-
+     // metodo update para modificar articulos de la base de datos , tomando como parametro el nuevo dato ingresado que se almacena en los metodos get set de articulos.
     public void Modificar(Articulos Modificar)
     {
         AccesoDatos Datos = new AccesoDatos();
@@ -168,7 +155,7 @@ namespace Negocio
 
 
     }
-
+    //metodo delete para borrar articulos de la base de datos , tomando como parametro el id del articulo.
     public void Eliminar(int id)
     {
         try
@@ -192,7 +179,7 @@ namespace Negocio
 
 
     }
-
+    //lista que se usa para listar el filtro avanzado, tomando datos para el campo(combobox) criterio(combobox) y el filtro(TextBox).)
     public List<Articulos> Filtrar(string campo, string criterio, string filtro)
         {
             List<Articulos> ListaFiltroAvanzado = new List<Articulos>();
@@ -248,7 +235,7 @@ namespace Negocio
 
                         case "Mayor a":
                            
-                           
+                           //si la consulta esta vacia , consultafiltro quedara vacia para evitar problemas en la query.
                             if (string.IsNullOrEmpty(filtro))
                             {
                                 consultaFiltro += " " + filtro;
@@ -263,6 +250,7 @@ namespace Negocio
 
                             
                         case "Menor a":
+                            //si la consulta esta vacia , consultafiltro quedara vacia para evitar problemas en la query.
                             if (string.IsNullOrEmpty(filtro))
                             {
                                 consultaFiltro += " " + filtro;
@@ -276,7 +264,7 @@ namespace Negocio
                         
 
                         default:
-                            
+                            //si la consulta esta vacia , consultafiltro quedara vacia para evitar problemas en la query.
                             if (string.IsNullOrEmpty(filtro))
                             {
                                 consultaFiltro += " " + filtro;

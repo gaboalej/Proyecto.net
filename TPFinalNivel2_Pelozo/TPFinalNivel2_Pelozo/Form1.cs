@@ -30,10 +30,10 @@ namespace TPFinalNivel2_Pelozo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // cargo todos los items que va a tener el combobox campo y el data grid en el load.
             CargarDataGridView();
 
-            // cargo todos los items que va a tener el combobox campo.
+            
             comboBoxCampo.Items.Add("Codigo");
             comboBoxCampo.Items.Add("Nombre");
             comboBoxCampo.Items.Add("Id");
@@ -63,7 +63,7 @@ namespace TPFinalNivel2_Pelozo
                 dataGridView1.Columns["Descripcion"].Visible = false;
 
 
-                //se carga la imagen que esta en el primer lugar del index.
+                //se carga la imagen al inicio que esta en el primer lugar del index.
                 cargarimagen(ListaDataGridView[0].ImagenUrl);
                
                 
@@ -96,6 +96,8 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
+            //se carga el datagridview del form2 y se agrega un articulo. si se agrega exitosamente , se vuelve a refrescar el datagridview.
+
             Form2 Agregar = new Form2();
 
             Agregar.ShowDialog();
@@ -111,7 +113,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-
+            // la imagen cambia dependiendo de que imagen se seleccione en el datagrid.
             Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
             cargarimagen(seleccionado.ImagenUrl);
 
@@ -126,7 +128,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void cargarimagen(string imagen)
         {
-
+           // se carga la url de una imagen mediante string , sino se agrega una imagen por defecto de error 404.
 
             try
             {
@@ -145,8 +147,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-
-
+            //se evalua si el datagrid no esta vacio y se modifica el articulo seleccionado.
 
             try
 
@@ -183,6 +184,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            //elimina segun el articulo seleccionado basandose en su id.
             NegocioArticulo Servicios = new NegocioArticulo();
 
             Articulos seleccionado;
@@ -219,7 +221,7 @@ namespace TPFinalNivel2_Pelozo
         }
 
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)
-        {
+        {//evalua si el filtro rapido tiene mas de un caracter en su textbox para poder realizar la busqueda,sino carga el datagrid con todos sus articulos.
             List<Articulos> ListaFiltro;
             if (textBoxFiltro.Text.Length > 0)
             {
@@ -243,7 +245,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // dependiendo que campo se seleccione , las opciones de su criterio cambiaran.
             string opcion = comboBoxCampo.SelectedItem.ToString();
 
             if (opcion == "Id")
@@ -272,7 +274,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-
+            // metodo que carga el datagrid segun el filtro seleccionado y analiza si el campo y criterio estan seleccionados.
             try
             {
 
@@ -325,7 +327,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxFiltroAvanzado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            // si el campo seleccionado es id solo se podran buscar numeros en el textbox del filtro avanzado.
             string campo = comboBoxCampo.SelectedItem.ToString();
 
             if (campo == "Id")
@@ -347,10 +349,10 @@ namespace TPFinalNivel2_Pelozo
 
 
 
-            // Obtener el artículo seleccionado en el dataGridView1
+            // Obtiene el artículo seleccionado en el dataGridView1
             Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
-
-            // Crear una nueva instancia del Form3 y pasar el artículo seleccionado como parámetro
+            // creo una nueva instancia del form3 y le paso (articulo) seleccionado como parametro para su constructor..
+            
             Form3 Verdetalles = new Form3(seleccionado);
             Verdetalles.ShowDialog();
 

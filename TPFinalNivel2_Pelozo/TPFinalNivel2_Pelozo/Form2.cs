@@ -28,13 +28,14 @@ namespace TPFinalNivel2_Pelozo
         {
 
             InitializeComponent();
-            // se le agrega el nombre a la ventana del formulario modificar.
+           // el constructor carga los valores de negocio (Articulos) automaticamente si se esta modificando.
             this.Negocio = negocio;
+            // se le agrega el nombre a la ventana del formulario modificar.
             Text = "Modificar producto";
 
 
         }
-
+        // metodo para cargar datos a los textbox. ya sea si se modifica o se agrega.
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
         NegocioArticulo Servicios= new NegocioArticulo();
@@ -115,7 +116,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void Form2_Load(object sender, EventArgs e)
         {
-          
+         // se le carga el desplegable de marcas/idmarcas y categorias /idcategoria con los valores correspondientes.
             NegocioMarcas marcas = new NegocioMarcas();
             try
             {
@@ -151,7 +152,7 @@ namespace TPFinalNivel2_Pelozo
 
 
 
-
+            //se le cargan a los textbox , los metodos getset de articulos. si se selecciono el boton modificar.
             try
             {
 
@@ -161,8 +162,6 @@ namespace TPFinalNivel2_Pelozo
               textBoxCodigo.Text = Negocio.Codigo;
               textBoxNombre.Text = Negocio.Nombre;
               textBoxDescripcion.Text = Negocio.Descripcion;
-              
-              
               textBoxImagenUrl.Text = Negocio.ImagenUrl;
               textBoxPrecio.Text = Negocio.Precio.ToString();
 
@@ -183,7 +182,7 @@ namespace TPFinalNivel2_Pelozo
 
 
         }
-
+        //metodo para validar si los campos estan vacios.
         private bool ValidarCampos()
         {
             bool camposValidos = true;
@@ -247,7 +246,7 @@ namespace TPFinalNivel2_Pelozo
         private void textBoxCodigo_TextChanged(object sender, EventArgs e)
         {
 
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
+            // si tiene aunque sea un caracter el color se vuelve blanco y si esta vacio se pone de color  rojo.
             if(textBoxCodigo.Text.Length > 0)
             {
 
@@ -258,7 +257,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
+            // si tiene aunque sea un caracter el color se vuelve blanco y si esta vacio se pone de color  rojo.
             if (textBoxNombre.Text.Length > 0)
             {
 
@@ -269,7 +268,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxDescripcion_TextChanged(object sender, EventArgs e)
         {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
+            // si tiene aunque sea un caracter el color se vuelve blanco y si esta vacio se pone de color  rojo.
             if (textBoxDescripcion.Text.Length > 0)
             {
 
@@ -284,7 +283,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxImagenUrl_TextChanged(object sender, EventArgs e)
         {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
+            // si tiene aunque sea un caracter el color se vuelve blanco y si esta vacio se pone de color  rojo.
             if (textBoxImagenUrl.Text.Length > 0)
             {
 
@@ -295,7 +294,7 @@ namespace TPFinalNivel2_Pelozo
 
         private void textBoxPrecio_TextChanged(object sender, EventArgs e)
         {
-            // si tiene un caracter el color se vuelve blanco si es que esta rojo.
+            // si tiene aunque sea un caracter el color se vuelve blanco y si esta vacio se pone de color  rojo.
             if (textBoxPrecio.Text.Length > 0)
             {
 

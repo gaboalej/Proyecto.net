@@ -8,9 +8,10 @@ using System.Runtime.InteropServices;
 
 namespace AccesoDatosSql
 {
-
+    
     public class AccesoDatos
     {
+        //Declaracion de variables para conectar la base de datos.
         private SqlConnection Conexion;
 
         private SqlCommand Comando;
@@ -18,6 +19,7 @@ namespace AccesoDatosSql
         private SqlDataReader Lector;
 
 
+        //aplico un get para poder almacenar la lectura
         public SqlDataReader lector
         {
 
@@ -26,7 +28,7 @@ namespace AccesoDatosSql
 
         }
 
-
+        //constructor que muestra el server y a que base de datos se va a conectar ,y se conecta con el usuario y clave del sistema operativo.
         public AccesoDatos()
         {
             Conexion = new SqlConnection("server =.\\SQLEXPRESS; database = CATALOGO_DB; integrated security = true ");
@@ -36,7 +38,7 @@ namespace AccesoDatosSql
 
         }
 
-
+        //metodo para poder aplicar el tipo de consulta , ya sea select ,update , delete ,insert.
         public void SetearConsulta(string Consulta)
         {
 
@@ -45,6 +47,7 @@ namespace AccesoDatosSql
 
         }
 
+        //metodo para ejecutar la query dada .
         public void EjecutarLectura()
         {
 
@@ -63,6 +66,8 @@ namespace AccesoDatosSql
             }
         }
 
+
+        // metodo para ejecutar una no query de lectura , ej insert update delete.
         public void ejecutarAccion()
         {
             Comando.Connection = Conexion;
@@ -80,7 +85,7 @@ namespace AccesoDatosSql
 
         }
 
-
+        // para poder concatenar @ a las consultas y que se puedan leer de mejor manera.
         public void setearparametros(string Nombre, object valor)
         {
 
@@ -92,7 +97,7 @@ namespace AccesoDatosSql
 
         }
 
-
+        // metodo para cerrar la conexion de la base de datos.
         public void CerrarConexion()
         {
 
