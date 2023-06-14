@@ -57,7 +57,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(870, 365);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -72,6 +72,7 @@
             // 
             // labelFiltroRapido
             // 
+            this.labelFiltroRapido.BackColor = System.Drawing.SystemColors.Info;
             this.labelFiltroRapido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelFiltroRapido.Location = new System.Drawing.Point(37, 13);
             this.labelFiltroRapido.Name = "labelFiltroRapido";
@@ -82,12 +83,13 @@
             // 
             // buttonAgregar
             // 
+            this.buttonAgregar.BackColor = System.Drawing.Color.Yellow;
             this.buttonAgregar.Location = new System.Drawing.Point(729, 438);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(100, 32);
             this.buttonAgregar.TabIndex = 3;
             this.buttonAgregar.Text = "Agregar";
-            this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // pictureBoxArticulos
@@ -101,27 +103,30 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.BackColor = System.Drawing.Color.Yellow;
             this.buttonModificar.Location = new System.Drawing.Point(851, 438);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(100, 32);
             this.buttonModificar.TabIndex = 5;
             this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonEliminar
             // 
+            this.buttonEliminar.BackColor = System.Drawing.Color.Yellow;
             this.buttonEliminar.Location = new System.Drawing.Point(978, 438);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(100, 32);
             this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // labelCampo
             // 
-            this.labelCampo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCampo.BackColor = System.Drawing.SystemColors.Info;
+            this.labelCampo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCampo.Location = new System.Drawing.Point(12, 491);
             this.labelCampo.Name = "labelCampo";
             this.labelCampo.Size = new System.Drawing.Size(100, 31);
@@ -141,7 +146,8 @@
             // 
             // labelCriterio
             // 
-            this.labelCriterio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCriterio.BackColor = System.Drawing.SystemColors.Info;
+            this.labelCriterio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCriterio.Location = new System.Drawing.Point(321, 491);
             this.labelCriterio.Name = "labelCriterio";
             this.labelCriterio.Size = new System.Drawing.Size(100, 31);
@@ -160,7 +166,8 @@
             // 
             // labelFiltroAvanzado
             // 
-            this.labelFiltroAvanzado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelFiltroAvanzado.BackColor = System.Drawing.SystemColors.Info;
+            this.labelFiltroAvanzado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelFiltroAvanzado.Location = new System.Drawing.Point(644, 491);
             this.labelFiltroAvanzado.Name = "labelFiltroAvanzado";
             this.labelFiltroAvanzado.Size = new System.Drawing.Size(118, 31);
@@ -179,22 +186,24 @@
             // 
             // buttonBuscar
             // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.Yellow;
             this.buttonBuscar.Location = new System.Drawing.Point(994, 492);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(100, 32);
             this.buttonBuscar.TabIndex = 13;
             this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // buttonDetalles
             // 
+            this.buttonDetalles.BackColor = System.Drawing.Color.Yellow;
             this.buttonDetalles.Location = new System.Drawing.Point(611, 438);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(100, 32);
             this.buttonDetalles.TabIndex = 14;
             this.buttonDetalles.Text = "Ver Detalles";
-            this.buttonDetalles.UseVisualStyleBackColor = true;
+            this.buttonDetalles.UseVisualStyleBackColor = false;
             this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
             // Form1

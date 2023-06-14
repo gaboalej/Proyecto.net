@@ -349,12 +349,24 @@ namespace TPFinalNivel2_Pelozo
 
 
 
+
+            try
+            {
             // Obtiene el artículo seleccionado en el dataGridView1
             Articulos seleccionado = (Articulos)dataGridView1.CurrentRow.DataBoundItem;
             // creo una nueva instancia del form3 y le paso (articulo) seleccionado como parametro para su constructor..
             
             Form3 Verdetalles = new Form3(seleccionado);
-            Verdetalles.ShowDialog();
+            Verdetalles.ShowDialog();   
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
 
 
 

@@ -40,7 +40,8 @@
             this.dataGridViewDetalles.Name = "dataGridViewDetalles";
             this.dataGridViewDetalles.RowHeadersWidth = 51;
             this.dataGridViewDetalles.RowTemplate.Height = 24;
-            this.dataGridViewDetalles.Size = new System.Drawing.Size(939, 104);
+            this.dataGridViewDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDetalles.Size = new System.Drawing.Size(1210, 104);
             this.dataGridViewDetalles.TabIndex = 0;
             // 
             // Form3
@@ -48,8 +49,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1040, 159);
+            this.ClientSize = new System.Drawing.Size(1276, 170);
             this.Controls.Add(this.dataGridViewDetalles);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalles";
